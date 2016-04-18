@@ -1,6 +1,6 @@
 [Icon Theme]
 Name=Vertex-Icons
-Inherits=Moka,gnome,hicolor
+Inherits=gnome,hicolor
 Comment=Icon theme
 
 #Directory list

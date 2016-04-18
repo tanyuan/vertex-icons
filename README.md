@@ -1,56 +1,49 @@
-# Vertex Icons (Beta)
+# Vertex Icons for GNOME
 
-**Note:** This is an unfinished beta version. It may not work as expected in some cases.
+This is a light icon theme features gray folders from **Vertex Icons** and mimetype icons from **Elementary Icons**. Looks good with GNOME default theme **Adwaita**.
 
-The Vertex icon theme is designed to go well together with the Vertex Gtk theme.
-At the moment it includes mainly icons for folders and mimetypes.
+This icon theme is not complete and with no application icons.
 
-### Requirements
+![Original Cover](http://i.imgur.com/paECSRR.png)
 
-Since this theme doesn't provide application icons, it needs another icon theme to inherit them.
-By default this theme will look for the Moka icon theme (http://mokaproject.com/moka-icon-theme/) to get the missing icons. If Moka is not installed it will use the Gnome icon theme as fallback.
-To change the application icons, edit the `index.theme` file and replace `Moka` with the name of your preferred icon theme
+## Installation
 
-For example, if you like the Faenza icon theme, change
+1. Copy to `~/.icons` or to `/usr/share/icons` for system-wide use.
+2. Select **Vertex** in **GNOME Tweak Tool**.
 
-    [Icon Theme]
-    Name=Vertex-Icons
-    Inherits=Moka,gnome,hicolor
-    Comment=Vertex Icon theme
+## Customization
 
-to
+### Activities Icon
 
-    [Icon Theme]
-    Name=Vertex-Icons
-    Inherits=Faenza,gnome,hicolor
-    Comment=Vertex Icon theme
+Install GNOME extension **[Activities configurator](https://extensions.gnome.org/extension/358/activities-configurator/)** and you can add Linux distro icons in `places/symbolic/start-here-*-symbolic.svg` to top panel.
 
-### Installation
+### Application Icons
 
-Copy the folder which contains this README to `~/.icons` or to `/usr/share/icons` for system-wide use.
+Add PNG or SVG icons with name of the application like `APPLICATION.png` (replace `APPLICATION` with your application name) and in corresponding pixel size to folders at least `apps/48/`, `apps/64/`, `apps/128/` and `apps/256/`.
 
-### Bug reporting
+Application mono SVG icons on GNOME Top Panel can be added to `apps/symbolic/` with file name `APPLICATION-symbolic.svg` (replace `APPLICATION` with your application name).
 
-If you find a bug, please report it at https://github.com/horst3180/Vertex-icons/issues
+### File Icons
 
-### Credits
+Put SVG icons or symbolic links under `mimetypes/128/` is sufficient.
 
-All credits for third party icons used in this theme go to their respective creators:
+#### Add new file types
 
-**elementary:** https://launchpad.net/elementaryicons licensed under the terms of the GPL v3
+Make sure Nautilus recognize your file type (mimetype) by right click on the file, open **Properties** and check **Type**.
 
-**elementary-xfce:** https://github.com/shimmerproject/elementary-xfce licensed under the terms of the GPL v2
+If it does not recognize your mimetype, define yours in `~/.local/share/mime/packages/`, for example `stl.xml` for `.stl` files.
 
-**Faenza:** https://code.google.com/p/faenza-icon-theme/ licensed under the terms of the GPL v3
+Run after you add a file:
+```
+update-mime-database ~/.local/share/mime/
+```
 
-**Faience:** https://code.google.com/p/faience-theme/ licensed under the terms of the GPL v3
+## Credits
 
-**GNOME Project:** http://www.gnome.org licensed under the terms of either the GNU LGPL v3 or Creative Commons Attribution-Share Alike 3.0 United States License
+* [Vertex Icons](https://github.com/horst3180/vertex-icons): GPL v3
 
-**Moka:** http://mokaproject.com/moka-icon-theme licensed under the terms of the GPL v3
+* [Elementary Icons](https://github.com/elementary/icons): GPL v3
 
-The remaining icons are created by Horst3180 and are licensed under the terms of the GPL v3
+* [GNOME Icons](https://github.com/gnome-design-team/gnome-icons): Creative Commons Attribution-Share Alike 3.0 United States License
 
-===
-
-![alt tag](http://i.imgur.com/paECSRR.png)
+Other icons are licensed under GPL v3.
